@@ -1,4 +1,4 @@
-package com.arthurabreu.olympicathletes.ui
+package com.arthurabreu.olympicathletes.ui.components
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
@@ -59,7 +59,7 @@ fun AthletesItem(
             .size(100.dp)
             .clickable {
                 // Handle the click
-            },
+            }
     ) {
         AsyncImage(
             model = ImageRequest.Builder(LocalContext.current)

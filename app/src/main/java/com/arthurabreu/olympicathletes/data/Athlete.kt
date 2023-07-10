@@ -4,5 +4,8 @@ import androidx.annotation.DrawableRes
 
 data class Athlete(
     val name: String,
-    @DrawableRes val picture: Int?
+    @DrawableRes val picture: Int?,
+    val dob: String,
+    val weight: String,
+    val height: String
 )
