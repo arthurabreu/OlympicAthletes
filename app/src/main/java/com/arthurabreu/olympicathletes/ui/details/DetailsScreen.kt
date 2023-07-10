@@ -1,5 +1,6 @@
 package com.arthurabreu.olympicathletes.ui.details
 
+import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.background
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Box
@@ -16,8 +17,10 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import com.arthurabreu.olympicathletes.R
 import com.arthurabreu.olympicathletes.data.Athlete
+import com.arthurabreu.olympicathletes.navigation.NavScreen
 import com.arthurabreu.olympicathletes.ui.components.AthleteDetails
 import com.arthurabreu.olympicathletes.ui.components.BioDetails
 import com.arthurabreu.olympicathletes.ui.components.MedalDetails
@@ -25,8 +28,12 @@ import com.arthurabreu.olympicathletes.ui.components.MedalDetails
 @Composable
 fun DetailsScreen(
     athleteId: String,
-    paddingValues: PaddingValues
+    paddingValues: PaddingValues,
+    navController: NavController
 ) {
+    BackHandler(true) {
+        navController.navigate(NavScreen.HomeScreen.route)
+    }
     Box(
         contentAlignment = Alignment.TopCenter,
         modifier = Modifier

@@ -27,7 +27,8 @@ fun AppNavigator(paddingValues: PaddingValues) {
         ) { entry ->
             DetailsScreen(
                 paddingValues = paddingValues,
-                athleteId = entry.arguments?.getString("athlete_details_id").toString()
+                athleteId = entry.arguments?.getString("athlete_details_id").toString(),
+                navController = navController
             )
         }
     }
