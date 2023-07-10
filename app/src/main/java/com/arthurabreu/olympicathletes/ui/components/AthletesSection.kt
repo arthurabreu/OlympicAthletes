@@ -28,14 +28,17 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import com.arthurabreu.olympicathletes.R
 import com.arthurabreu.olympicathletes.data.Athlete
+import com.arthurabreu.olympicathletes.navigation.NavScreen
 
 @Composable
 fun AthletesSection(
-    athletes: List<Athlete>
+    athletes: List<Athlete>,
+    navController: NavController
 ) {
     LazyRow(
         modifier = Modifier
@@ -43,7 +46,7 @@ fun AthletesSection(
             .fillMaxWidth()
     ) {
         items(athletes.size) {
-            AthletesItem(athletes[it])
+            AthletesItem(athletes[it], navController)
             Spacer(modifier = Modifier.width(16.dp))
         }
     }
@@ -51,14 +54,15 @@ fun AthletesSection(
 
 @Composable
 fun AthletesItem(
-    athlete: Athlete
+    athlete: Athlete,
+    navController: NavController
 ) {
     Box(
         contentAlignment = Alignment.Center,
         modifier = Modifier
             .size(100.dp)
             .clickable {
-                // Handle the click
+                navController.navigate(NavScreen.DetailsScreen.withArgs(athlete.id.toString()))
             }
     ) {
         AsyncImage(

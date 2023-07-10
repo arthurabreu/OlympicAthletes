@@ -13,22 +13,25 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import com.arthurabreu.olympicathletes.data.GameAthletes
 
 @Composable
 fun GamesSection(
     games: List<GameAthletes>,
+    navController: NavController
 ) {
     LazyColumn {
         items(games.size) {
-            GameItem(games[it])
+            GameItem(games[it], navController)
         }
     }
 }
 
 @Composable
 fun GameItem(
-    game: GameAthletes
+    game: GameAthletes,
+    navController: NavController
 ) {
     Column(
         modifier = Modifier
@@ -44,6 +47,6 @@ fun GameItem(
             modifier = Modifier
                 .padding(start = 16.dp, bottom = 4.dp)
         )
-        AthletesSection(game.athletes)
+        AthletesSection(game.athletes, navController)
     }
 }

@@ -23,7 +23,10 @@ import com.arthurabreu.olympicathletes.ui.components.BioDetails
 import com.arthurabreu.olympicathletes.ui.components.MedalDetails
 
 @Composable
-fun DetailsScreen(paddingValues: PaddingValues) {
+fun DetailsScreen(
+    athleteId: String,
+    paddingValues: PaddingValues
+) {
     Box(
         contentAlignment = Alignment.TopCenter,
         modifier = Modifier
@@ -37,15 +40,14 @@ fun DetailsScreen(paddingValues: PaddingValues) {
                 .fillMaxSize()
                 .verticalScroll(rememberScrollState())
         ) {
-            AthleteDetails(
-                Athlete(
-                    "Michael Phelps",
-                    R.drawable.user,
-                    "28/12/1989",
-                    "100kg",
-                    "192cm"
-                )
-            )
+            AthleteDetails(Athlete(
+                0,
+                "Michael Phelps",
+                R.drawable.user,
+                "28/12/1989",
+                "100kg",
+                "192cm"
+            ))
             Spacer(modifier = Modifier.height(30.dp))
             MedalDetails()
             Spacer(modifier = Modifier.height(30.dp))
