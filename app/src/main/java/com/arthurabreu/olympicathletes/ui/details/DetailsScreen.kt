@@ -47,14 +47,14 @@ fun DetailsScreen(
                 .fillMaxSize()
                 .verticalScroll(rememberScrollState())
         ) {
-            AthleteDetails(Athlete(
-                0,
-                "Michael Phelps",
-                R.drawable.user,
-                "28/12/1989",
-                "100kg",
-                "192cm"
-            ))
+//            AthleteDetails(Athlete(
+//                0,
+//                "Michael Phelps",
+//                R.drawable.user,
+//                "28/12/1989",
+//                "100kg",
+//                "192cm"
+//            ))
             Spacer(modifier = Modifier.height(30.dp))
             MedalDetails()
             Spacer(modifier = Modifier.height(30.dp))

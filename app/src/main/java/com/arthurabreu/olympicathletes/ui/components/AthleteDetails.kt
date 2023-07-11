@@ -54,7 +54,7 @@ fun AthleteDetails(
         ) {
             AsyncImage(
                 model = ImageRequest.Builder(LocalContext.current)
-                    .data(athlete.picture)
+                    .data("")
                     .crossfade(true)
                     .build(),
                 placeholder = painterResource(R.drawable.user),

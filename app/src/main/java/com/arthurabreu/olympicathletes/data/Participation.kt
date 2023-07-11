@@ -1,6 +1,6 @@
 package com.arthurabreu.olympicathletes.data
 
-data class GameAthletes(
+data class Participation(
     val name: String,
     val athletes: List<Athlete>
 )

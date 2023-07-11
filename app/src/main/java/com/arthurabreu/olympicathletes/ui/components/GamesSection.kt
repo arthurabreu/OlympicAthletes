@@ -14,11 +14,11 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
-import com.arthurabreu.olympicathletes.data.GameAthletes
+import com.arthurabreu.olympicathletes.data.Participation
 
 @Composable
 fun GamesSection(
-    games: List<GameAthletes>,
+    games: List<Participation>,
     navController: NavController
 ) {
     LazyColumn {
@@ -30,23 +30,25 @@ fun GamesSection(
 
 @Composable
 fun GameItem(
-    game: GameAthletes,
+    game: Participation,
     navController: NavController
 ) {
     Column(
         modifier = Modifier
             .padding(top = 16.dp)
     ) {
-        Text(
-            text = game.name,
-            textAlign = TextAlign.Left,
-            color = if (isSystemInDarkTheme()) Color.White else Color.Black,
-            fontSize = 18.sp,
-            fontWeight = FontWeight.Bold,
-            style = MaterialTheme.typography.titleMedium,
-            modifier = Modifier
-                .padding(start = 16.dp, bottom = 4.dp)
-        )
-        AthletesSection(game.athletes, navController)
+        if (game.athletes.isNotEmpty()) {
+            Text(
+                text = game.name,
+                textAlign = TextAlign.Left,
+                color = if (isSystemInDarkTheme()) Color.White else Color.Black,
+                fontSize = 18.sp,
+                fontWeight = FontWeight.Bold,
+                style = MaterialTheme.typography.titleMedium,
+                modifier = Modifier
+                    .padding(start = 16.dp, bottom = 4.dp)
+            )
+            AthletesSection(game.athletes, navController)
+        }
     }
 }

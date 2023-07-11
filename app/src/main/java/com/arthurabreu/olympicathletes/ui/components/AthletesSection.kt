@@ -62,12 +62,12 @@ fun AthletesItem(
         modifier = Modifier
             .size(100.dp)
             .clickable {
-                navController.navigate(NavScreen.DetailsScreen.withArgs(athlete.id.toString()))
+                navController.navigate(NavScreen.DetailsScreen.withArgs(athlete.athleteID.toString()))
             }
     ) {
         AsyncImage(
             model = ImageRequest.Builder(LocalContext.current)
-                .data("https://cdn.britannica.com/86/172786-050-0EA326A4/Shelly-Ann-Fraser-Pryce.jpg")
+                .data(athlete.image)
                 .crossfade(true)
                 .build(),
             placeholder = painterResource(R.drawable.user),

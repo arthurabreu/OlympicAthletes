@@ -30,7 +30,7 @@ fun BioDetails() {
             modifier = Modifier
         )
         Text(
-            text = stringResource(id = R.string.ipsum),
+            text = stringResource(id = R.string.bio),
             color = if (isSystemInDarkTheme()) Color.White else Color.Black,
             fontSize = 20.sp,
             fontWeight = FontWeight.Normal,

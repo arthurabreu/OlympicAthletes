@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Olympic Athletes</string>
     <string name="athlete_picture">Athlete picture</string>
     <string name="app_logo">"App Logo"</string>
@@ -11,13 +11,5 @@
     <string name="silver">Silver</string>
     <string name="bronze">Bronze</string>
     <string name="bio">Bio</string>
-    <string name="ipsum">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi est odio, feugiat sed pharetra eget, tempus ut velit. Vivamus condimentum sollicitudin augue, non dapibus quam blandit quis. In nisl nunc, faucibus vitae placerat at, molestie eget est. Vivamus rhoncus, ex non luctus vestibulum, eros odio efficitur metus, nec condimentum elit urna ac orci. Pellentesque gravida nisi eget orci lobortis pellentesque. Donec consequat congue sagittis. Pellentesque et auctor mauris. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Pellentesque dignissim lobortis rhoncus. Ut et bibendum odio. Ut finibus neque lectus, scelerisque consectetur odio vehicula sed. Pellentesque sagittis sit amet magna sed blandit.\n" +
-                    "\n" +
-                    "Praesent sagittis erat commodo rhoncus posuere. Curabitur ac pulvinar metus. Nam pharetra libero lectus, at maximus augue mattis non. Pellentesque vitae mauris sit amet dolor convallis consequat id ultricies turpis. In suscipit tortor metus, quis interdum neque convallis at. Aliquam consequat ex purus, in hendrerit orci aliquet eu. Donec ac convallis lorem.\n" +
-                    "\n" +
-                    "Vivamus egestas lacus eu odio pellentesque suscipit. Curabitur feugiat quis justo vel suscipit. Aliquam posuere sollicitudin sapien, eu malesuada erat rutrum pellentesque. Pellentesque venenatis diam ex, nec tempor metus dignissim ac. Donec lacus sapien, bibendum ac congue ac, sodales ut urna. Vivamus lacinia malesuada iaculis. Integer quis lectus sollicitudin, pharetra urna sit amet, laoreet ipsum. Proin nec suscipit elit, vel lacinia augue. Pellentesque bibendum aliquam efficitur. Proin venenatis luctus quam, eget vehicula dui tempor sit amet. Nullam tortor ex, consequat et elit nec, tincidunt laoreet nisi. Morbi eget augue rhoncus, elementum mauris eu, commodo nisi. Nam massa magna, malesuada eu felis eu, semper scelerisque nibh. Integer consectetur in nisi sit amet volutpat. Maecenas vel dignissim magna, quis fermentum nulla. Aliquam quam quam, tempus ac rutrum eget, mollis a erat.\n" +
-                    "\n" +
-                    "Maecenas fermentum lacus in tellus blandit faucibus. Morbi ut lobortis metus. Sed non dictum urna. Aliquam luctus tincidunt dignissim. Nunc pulvinar velit ac tincidunt tempus. Phasellus non eleifend tellus. Nunc mi quam, lacinia vitae cursus at, consectetur quis lectus. In tristique metus vel urna maximus eleifend. Fusce consequat porttitor risus, eget mattis quam ullamcorper sed. Aliquam interdum ligula at eros facilisis, ac eleifend sapien porta. Donec faucibus elit turpis, quis porta sapien congue ac. Proin odio mauris, maximus eu lobortis quis, rutrum ac tortor.\n" +
-                    "\n" +
-                    "Proin cursus urna leo, sollicitudin convallis augue tempus quis. Nullam commodo et eros ac accumsan. Cras eget rhoncus ligula. Quisque eu tortor leo. Vestibulum auctor velit non purus pharetra, et auctor neque fringilla. Sed tempus consequat urna vitae euismod. Phasellus euismod quam eget urna vulputate, imperdiet bibendum ligula sollicitudin. Etiam tristique aliquet erat ac venenatis. Ut non enim est. Donec rhoncus eget risus a feugiat. Phasellus placerat nibh massa, sed varius ligula aliquet sit amet."</string>
+     <string name="loading" tools:ignore="TypographyEllipsis">Loading...</string>
 </resources>
