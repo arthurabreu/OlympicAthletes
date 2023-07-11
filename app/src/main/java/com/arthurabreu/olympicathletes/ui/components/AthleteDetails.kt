@@ -39,7 +39,8 @@ import com.arthurabreu.olympicathletes.ui.theme.OlympicGold
 
 @Composable
 fun AthleteDetails(
-    athlete: Athlete
+    athlete: Athlete,
+    imageUrl: String
 ) {
     Box(
         contentAlignment = Alignment.Center,
@@ -54,7 +55,7 @@ fun AthleteDetails(
         ) {
             AsyncImage(
                 model = ImageRequest.Builder(LocalContext.current)
-                    .data("")
+                    .data(imageUrl)
                     .crossfade(true)
                     .build(),
                 placeholder = painterResource(R.drawable.user),
@@ -78,7 +79,7 @@ fun AthleteInfo(athlete: Athlete) {
             .fillMaxHeight()
             .fillMaxWidth()
     ) {
-        TextInfo(text = textInfoStyle(R.string.name, athlete.name))
+        TextInfo(text = textInfoStyle(R.string.name, athlete.name + " " + athlete.surname))
         TextInfo(text = textInfoStyle(R.string.dob, athlete.dob))
         TextInfo(text = textInfoStyle(R.string.weight, athlete.weight))
         TextInfo(text = textInfoStyle(R.string.height, athlete.height))

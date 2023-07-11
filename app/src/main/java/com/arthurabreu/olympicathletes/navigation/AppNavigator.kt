@@ -18,9 +18,12 @@ fun AppNavigator(paddingValues: PaddingValues) {
             HomeScreen(paddingValues = paddingValues, navController)
         }
         composable(
-            route = NavScreen.DetailsScreen.route + "/{athlete_details_id}",
+            route = NavScreen.DetailsScreen.route + "/{athlete_details_id}/{athlete_image_url}",
             arguments = listOf(
                 navArgument("athlete_details_id") {
+                    type = NavType.StringType
+                },
+                navArgument("athlete_image_url") {
                     type = NavType.StringType
                 }
             )
@@ -28,6 +31,7 @@ fun AppNavigator(paddingValues: PaddingValues) {
             DetailsScreen(
                 paddingValues = paddingValues,
                 athleteId = entry.arguments?.getString("athlete_details_id").toString(),
+                imageUrl = entry.arguments?.getString("athlete_image_url").toString(),
                 navController = navController
             )
         }

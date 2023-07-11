@@ -16,9 +16,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.arthurabreu.olympicathletes.R
 
-@Preview
 @Composable
-fun BioDetails() {
+fun BioDetails(bio: String) {
     Column() {
         Text(
             text = stringResource(id = R.string.bio),
@@ -30,7 +29,7 @@ fun BioDetails() {
             modifier = Modifier
         )
         Text(
-            text = stringResource(id = R.string.bio),
+            text = bio,
             color = if (isSystemInDarkTheme()) Color.White else Color.Black,
             fontSize = 20.sp,
             fontWeight = FontWeight.Normal,

@@ -34,6 +34,7 @@ import coil.request.ImageRequest
 import com.arthurabreu.olympicathletes.R
 import com.arthurabreu.olympicathletes.data.Athlete
 import com.arthurabreu.olympicathletes.navigation.NavScreen
+import java.net.URLEncoder
 
 @Composable
 fun AthletesSection(
@@ -62,7 +63,9 @@ fun AthletesItem(
         modifier = Modifier
             .size(100.dp)
             .clickable {
-                navController.navigate(NavScreen.DetailsScreen.withArgs(athlete.athleteID.toString()))
+                val id = athlete.athleteID.toString()
+                val image = URLEncoder.encode(athlete.image.toString(), "utf-8")
+                navController.navigate(NavScreen.DetailsScreen.withArgs(id, image))
             }
     ) {
         AsyncImage(
