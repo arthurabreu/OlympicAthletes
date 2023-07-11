@@ -12,4 +12,6 @@
     <string name="bronze">Bronze</string>
     <string name="bio">Bio</string>
      <string name="loading" tools:ignore="TypographyEllipsis">Loading...</string>
+     <string name="height_cm">%s cm</string>
+     <string name="weight_kg">%s kg</string>
 </resources>

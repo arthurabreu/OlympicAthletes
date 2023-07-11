@@ -81,8 +81,14 @@ fun AthleteInfo(athlete: Athlete) {
     ) {
         TextInfo(text = textInfoStyle(R.string.name, athlete.name + " " + athlete.surname))
         TextInfo(text = textInfoStyle(R.string.dob, athlete.dob))
-        TextInfo(text = textInfoStyle(R.string.weight, athlete.weight))
-        TextInfo(text = textInfoStyle(R.string.height, athlete.height))
+        TextInfo(text = textInfoStyle(R.string.weight, stringResource(
+            id = R.string.weight_kg,
+            athlete.weight
+        )))
+        TextInfo(text = textInfoStyle(R.string.height, stringResource(
+            id = R.string.height_cm,
+            athlete.height
+        )))
     }
 }
 
