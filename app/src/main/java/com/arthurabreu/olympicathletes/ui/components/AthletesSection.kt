@@ -94,7 +94,7 @@ fun AthletesItem(
                 )
         ) {
             Text(
-                text = athlete.name,
+                text = athlete.name + " " + athlete.surname,
                 color = Color.White,
                 fontSize = 10.sp,
                 fontWeight = FontWeight.Medium,

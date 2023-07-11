@@ -46,7 +46,7 @@ class HomeViewModel @Inject constructor() : ViewModel() {
                                     "https://ocs-test-backend.onrender.com/athletes/" +
                                             "${athlete.athleteID}/photo"
                             }
-                            emit(Participation(game.city + " " + game.year, gamesAthletes))
+                            emit(Participation(game.year,game.city + " " + game.year, gamesAthletes))
                         }
                     }
                     .collect { participation ->
@@ -68,7 +68,8 @@ class HomeViewModel @Inject constructor() : ViewModel() {
             }
 
             participationResult.collect { completedParticipations ->
-                _participation.emit(completedParticipations)
+                val sortedParticipations = completedParticipations.sortedByDescending { it.year }
+                _participation.emit(sortedParticipations)
                 Log.i(
                     HomeViewModel::class.java.simpleName,
                     "Completed Participations: ${completedParticipations.size}"
