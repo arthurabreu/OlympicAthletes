@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Scaffold
+import androidx.navigation.compose.rememberNavController
 import com.arthurabreu.olympicathletes.navigation.AppNavigator
 import com.arthurabreu.olympicathletes.ui.components.AppBar
 import com.arthurabreu.olympicathletes.ui.theme.OlympicAthletesTheme
@@ -19,10 +20,13 @@ class MainActivity : ComponentActivity() {
 
         setContent {
             OlympicAthletesTheme {
+                val navController = rememberNavController()
                 Scaffold (
-                    topBar = { AppBar() }
+                    topBar = {
+                        AppBar(navController)
+                    }
                 ) {
-                    AppNavigator(it)
+                    AppNavigator(navController, it)
                 }
             }
         }

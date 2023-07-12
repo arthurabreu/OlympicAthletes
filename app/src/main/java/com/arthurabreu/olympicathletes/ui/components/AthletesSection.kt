@@ -64,8 +64,9 @@ fun AthletesItem(
             .size(100.dp)
             .clickable {
                 val id = athlete.athleteID.toString()
+                val name = athlete.name + " " + athlete.surname
                 val image = URLEncoder.encode(athlete.image.toString(), "utf-8")
-                navController.navigate(NavScreen.DetailsScreen.withArgs(id, image))
+                navController.navigate(NavScreen.DetailsScreen.withArgs(id, image, name))
             }
     ) {
         AsyncImage(

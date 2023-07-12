@@ -35,6 +35,7 @@ import java.net.URLDecoder
 @Composable
 fun DetailsScreen(
     athleteId: String,
+    athleteName: String,
     imageUrl: String,
     paddingValues: PaddingValues,
     navController: NavController,
