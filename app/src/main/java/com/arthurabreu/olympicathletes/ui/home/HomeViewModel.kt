@@ -3,6 +3,7 @@ package com.arthurabreu.olympicathletes.ui.home
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.arthurabreu.olympicathletes.data.AthleteResults
 import com.arthurabreu.olympicathletes.data.Participation
 import com.arthurabreu.olympicathletes.network.OlympicRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -42,11 +43,14 @@ class HomeViewModel @Inject constructor() : ViewModel() {
                         flow {
                             val gamesAthletes = repository.getGamesAthletes(game.gameId)
                             gamesAthletes.forEach { athlete ->
+                                val results = repository.getAthleteResults(athlete.athleteID)
+                                athlete.score = calculateScore(results)
                                 athlete.image =
                                     "https://ocs-test-backend.onrender.com/athletes/" +
                                             "${athlete.athleteID}/photo"
                             }
-                            emit(Participation(game.year,game.city + " " + game.year, gamesAthletes))
+                            val sortedAthletes = gamesAthletes.sortedByDescending { it.score }
+                            emit(Participation(game.year,game.city + " " + game.year, sortedAthletes))
                         }
                     }
                     .collect { participation ->
@@ -76,5 +80,9 @@ class HomeViewModel @Inject constructor() : ViewModel() {
                 )
             }
         }
+    }
+
+    private fun calculateScore(athleteResults: List<AthleteResults>): Int {
+        return athleteResults.sumOf { it.gold * 5 + it.silver * 3 + it.bronze }
     }
 }

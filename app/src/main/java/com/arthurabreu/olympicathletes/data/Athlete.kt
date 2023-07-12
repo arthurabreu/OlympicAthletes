@@ -20,4 +20,6 @@ data class Athlete(
     @SerializedName("height")
     val height: String,
     var image: String? = null
-)
+) {
+    var score: Int = 0
+}
