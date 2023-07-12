@@ -129,7 +129,7 @@ fun DetailsBar(
 
                         Icon(
                             imageVector = Icons.Filled.ArrowBack,
-                            tint = Color.Black,
+                            tint = if (isSystemInDarkTheme()) Color.White else Color.Black,
                             contentDescription = "Back",
                             modifier = Modifier
                                 .constrainAs(icon) {
