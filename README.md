@@ -20,7 +20,7 @@ There is an APK built and provided in the root of this repository. Below are pic
 
 ## Video
 
-[![App Demo](https://img.youtube.com/vi/VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=VIDEO_ID)
+[Demo on Vimeo](https://vimeo.com/845046843?share=copy)
 
 ## Technologies Used
 
