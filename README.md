@@ -45,3 +45,4 @@ The App Theme uses the general Android Studio new project, so the app and system
 - Improve content loading strategy to reduce initial loading time.
 - Introduce a database to cache content and reduce reliance on the internet connection.
 - Add repositories and use cases to offload business logic from `HomeViewModel` and make the architecture cleaner.
+- If not able to improve loading, apply a loading screen with a % counter for the amount of data loaded and with images/information about the Olympic games while the user waits
