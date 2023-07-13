@@ -13,12 +13,16 @@ import com.arthurabreu.olympicathletes.ui.home.HomeScreen
 
 @Composable
 fun AppNavigator(navController: NavController, paddingValues: PaddingValues) {
-    NavHost(navController = navController as NavHostController, startDestination = NavScreen.HomeScreen.route) {
+    NavHost(
+        navController = navController as NavHostController,
+        startDestination = NavScreen.HomeScreen.route
+    ) {
         composable(route = NavScreen.HomeScreen.route) {
             HomeScreen(paddingValues = paddingValues, navController)
         }
         composable(
-            route = NavScreen.DetailsScreen.route + "/{athlete_details_id}/{athlete_image_url}/{athlete_name}",
+            route = NavScreen.DetailsScreen.route +
+                    "/{athlete_details_id}/{athlete_image_url}/{athlete_name}",
             arguments = listOf(
                 navArgument("athlete_details_id") {
                     type = NavType.StringType

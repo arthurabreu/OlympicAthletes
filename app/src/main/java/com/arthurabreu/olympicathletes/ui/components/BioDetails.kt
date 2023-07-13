@@ -63,7 +63,10 @@ fun MarkdownView(markdownContent: String) {
     AndroidView(factory = { context ->
         WebView(context).apply {
             webViewClient = WebViewClient()
-            setBackgroundColor(android.graphics.Color.parseColor(if (isLight) "#FFFFFF" else "#000000"))
+            setBackgroundColor(android.graphics.Color.parseColor(
+                if (isLight) "#FFFFFF"
+                else "#000000"
+            ))
             settings.apply {
                 javaScriptEnabled = true
                 loadWithOverviewMode = true
@@ -73,6 +76,12 @@ fun MarkdownView(markdownContent: String) {
             }
         }
     }, update = { webView ->
-        webView.loadDataWithBaseURL(null, htmlContent, "text/html", "utf-8", null)
+        webView.loadDataWithBaseURL(
+            null,
+            htmlContent,
+            "text/html",
+            "utf-8",
+            null
+        )
     })
 }

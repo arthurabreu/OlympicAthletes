@@ -50,7 +50,11 @@ class HomeViewModel @Inject constructor() : ViewModel() {
                                             "${athlete.athleteID}/photo"
                             }
                             val sortedAthletes = gamesAthletes.sortedByDescending { it.score }
-                            emit(Participation(game.year,game.city + " " + game.year, sortedAthletes))
+                            emit(Participation(
+                                game.year,
+                                game.city + " " + game.year,
+                                sortedAthletes
+                            ))
                         }
                     }
                     .collect { participation ->
