@@ -8,10 +8,15 @@ There is an APK built and provided in the root of this repository. Below are pic
 
 ## Screenshots
 
-![Screenshot 1](mocks/home_scren_light.png)
-![Screenshot 2](mocks/details_screen_light.png)
-![Screenshot 3](mocks/home_screen_dark.png)
-![Screenshot 4](mocks/details_screen_dark.png)
+<p float="left">
+  <img src="mocks/home_screen_light.png" alt="Screenshot 1" width="300"/>
+  <img src="mocks/details_screen_light.png" alt="Screenshot 2" width="300"/>
+</p>
+
+<p float="left">
+  <img src="mocks/home_screen_dark.png" alt="Screenshot 3" width="300"/>
+  <img src="mocks/details_screen_dark.png" alt="Screenshot 4" width="300"/>
+</p>
 
 ## Video
 
